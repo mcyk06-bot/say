@@ -69,40 +69,40 @@ font-weight: 400; font-size: 0.78em;
 color: #aaaadd; letter-spacing: 0.3em; margin-bottom: 28px;
 }
 .t-rule-box {
-width: 100%; border: 1px solid var(–border); border-radius: 2px;
-padding: 16px 18px; margin-bottom: 26px;
-font-size: 0.78em; line-height: 2.1; color: #111; font-weight: 700; font-family: ‘Noto Sans JP’, sans-serif;
+width: 100%;
+padding: 16px 0; margin-bottom: 26px;
+font-size: 0.82em; line-height: 2.2; color: #ccccff; font-weight: 400; font-family: ‘Noto Sans JP’, sans-serif;
 }
-.t-rule-box .hi  { color: #b06000; font-weight: 900; }
-.t-rule-box .red { color: #cc0033; font-weight: 900; }
-.t-rule-box .grn { color: #007744; font-weight: 900; }
+.t-rule-box .hi  { color: #ffcc00; font-weight: 700; }
+.t-rule-box .red { color: #ff2255; font-weight: 700; }
+.t-rule-box .grn { color: #00dd88; font-weight: 700; }
 .sec-label {
 width: 100%; text-align: left;
 font-family: ‘DotGothic16’, monospace; font-size: 0.6em;
-color: var(–muted); letter-spacing: 0.25em; margin-bottom: 12px; text-transform: uppercase;
+color: #8888bb; letter-spacing: 0.25em; margin-bottom: 12px; text-transform: uppercase;
 }
 .lv-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; width: 100%; margin-bottom: 20px; }
 .lv-btn {
-aspect-ratio: 1; background: var(–panel); border: 1px solid var(–border);
-border-radius: 2px; color: var(–muted); cursor: pointer;
+aspect-ratio: 1; background: #1a1a2e; border: 1px solid #333355;
+border-radius: 2px; color: #8888bb; cursor: pointer;
 display: flex; flex-direction: column; align-items: center; justify-content: center;
-gap: 2px; transition: all 0.18s; font-family: ‘Noto Sans JP’, sans-serif;
+gap: 2px; transition: border-color 0.18s, background 0.18s; font-family: ‘Noto Sans JP’, sans-serif;
 }
-.lv-btn .n { font-size: 1.3em; font-weight: 700; color: var(–text); line-height: 1; }
+.lv-btn .n { font-size: 1.3em; font-weight: 700; color: #ccccff; line-height: 1; }
 .lv-btn .s { font-family: ‘Space Mono’, monospace; font-size: 0.52em; color: var(–sage); }
-.lv-btn:hover:not(.locked) { border-color: var(–amber); background: rgba(200,144,60,0.06); }
-.lv-btn.sel   { border-color: var(–amber); background: rgba(200,144,60,0.08); }
-.lv-btn.sel .n { color: var(–gold); }
-.lv-btn.done  { border-color: var(–dim); }
+.lv-btn:hover:not(.locked) { border-color: #ff6600; background: rgba(255,102,0,0.1); }
+.lv-btn.sel   { border-color: #ff6600; background: rgba(255,102,0,0.12); }
+.lv-btn.sel .n { color: #ffcc00; }
+.lv-btn.done  { border-color: #333355; }
 .lv-btn.locked { opacity: 0.2; cursor: not-allowed; }
 .btn-start {
 width: 100%; padding: 15px; background: transparent;
-border: 1px solid var(–amber); border-radius: 2px;
-color: var(–amber); font-family: ‘Noto Sans JP’, sans-serif;
+border: 1px solid #ff6600; border-radius: 2px; background: transparent;
+color: #ff6600; font-family: ‘Noto Sans JP’, sans-serif;
 font-weight: 900; font-size: 1.1em;
-letter-spacing: 0.3em; cursor: pointer; transition: all 0.22s;
+letter-spacing: 0.3em; cursor: pointer; transition: border-color 0.2s, background 0.2s, color 0.2s;
 }
-.btn-start:hover  { background: var(–amber); color: var(–night); }
+.btn-start:hover  { background: #ff6600; color: #000; }
 .btn-start:active { transform: scale(0.98); }
 
 /* ━━━━━ GAME ━━━━━ */
