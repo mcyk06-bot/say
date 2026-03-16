@@ -3,12 +3,12 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Say Goodnight</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=DotGothic16&family=Noto+Sans+JP:wght@400;700;900&family=Space+Mono&display=swap" rel="stylesheet">
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; user-select: none; -webkit-user-select: none; }
+* { box-sizing: border-box; margin: 0; padding: 0; user-select: none; -webkit-user-select: none; touch-action: manipulation; }
 html { background: #0a0a12; }
 #backdrop { position: fixed; inset: 0; background: #0a0a12; z-index: -1; }
 body {
@@ -344,10 +344,10 @@ font-size: 9em; pointer-events: none; opacity: 0; z-index: 500;
 
 <div class="game-bottom">
   <div class="btn-slot">
-    <button class="btn-sei" id="btn-sei" onclick="onSei()">SAY</button>
+    <button class="btn-sei" id="btn-sei">SAY</button>
     <div class="ans-row hidden" id="ans-row">
-      <button class="btn-gn" onclick="onAns('gn')">グッナイ</button>
-      <button class="btn-kw" onclick="onAns('kw')">コンニチワ</button>
+      <button class="btn-gn" id="btn-gn">グッナイ</button>
+      <button class="btn-kw" id="btn-kw">コンニチワ</button>
     </div>
   </div>
   <p class="kbd-hint">space = SAY &nbsp; Z/← = グッナイ &nbsp; X/→ = コンニチワ</p>
@@ -591,7 +591,7 @@ function onTimeout() {
   setChara('neutral');
   record(false);
   flash('—', false);
-  setTimeout(()=>{ clearFb(); rs.qi++; nextQ(); }, 400);
+  setTimeout(()=>{ clearFb(); rs.qi++; nextQ(); }, 250);
 }
 
 function onSei() {
@@ -612,7 +612,7 @@ function onAns(a) {
   record(ok);
   setChara(a);
   flash(ok ? '○' : '×', ok);
-  setTimeout(()=>{ clearFb(); rs.qi++; nextQ(); }, 500);
+  setTimeout(()=>{ clearFb(); rs.qi++; nextQ(); }, 250);
 }
 
 function record(ok) {
@@ -720,6 +720,25 @@ function speakWords(w1, w2) {
 }
 
 renderTitle();
+
+// ── Fast touch handling ──
+function addTap(id, fn) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  let tapped = false;
+  el.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    if (tapped) return;
+    tapped = true;
+    fn();
+    setTimeout(() => tapped = false, 100);
+  }, { passive: false });
+  el.addEventListener('click', fn); // fallback for desktop
+}
+addTap('btn-sei', onSei);
+addTap('btn-gn', () => onAns('gn'));
+addTap('btn-kw', () => onAns('kw'));
+
 </script>
 
 </body>
