@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -47,266 +48,260 @@ body {
 
 /* ━━━━━ TITLE ━━━━━ */
 #scr-title {
-  align-items: center;
-  justify-content: center;
+align-items: center;
+justify-content: center;
 }
 .t-eyebrow {
-  font-family: 'DotGothic16', monospace;
-  font-size: 0.68em; letter-spacing: 0.25em;
-  color: var(--muted); margin-bottom: 14px; text-transform: uppercase;
+font-family: ‘DotGothic16’, monospace;
+font-size: 0.68em; letter-spacing: 0.25em;
+color: #aaaadd; margin-bottom: 14px; text-transform: uppercase;
 }
 .t-main {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300; font-style: italic; font-size: 3.2em;
-  color: var(--cream); letter-spacing: 0.02em; line-height: 1;
-  margin-bottom: 4px; text-align: center;
-  text-shadow: 0 0 20px rgba(255,204,0,0.3);
+font-family: ‘Cormorant Garamond’, serif;
+font-weight: 400; font-style: italic; font-size: 3.2em;
+color: #ffffff; letter-spacing: 0.02em; line-height: 1;
+margin-bottom: 4px; text-align: center;
+text-shadow: 0 0 1px #fff, 0 0 24px rgba(255,204,0,0.5);
 }
 .t-sub {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 400; font-size: 0.78em;
-  color: var(--muted); letter-spacing: 0.3em; margin-bottom: 28px;
+font-family: ‘Noto Sans JP’, sans-serif;
+font-weight: 400; font-size: 0.78em;
+color: #aaaadd; letter-spacing: 0.3em; margin-bottom: 28px;
 }
 .t-rule-box {
-  width: 100%; border: 1px solid var(--border); border-radius: 2px;
-  padding: 16px 18px; margin-bottom: 26px;
-  font-size: 0.78em; line-height: 2.1; color: #111; font-weight: 700; font-family: 'Noto Sans JP', sans-serif;
+width: 100%; border: 1px solid var(–border); border-radius: 2px;
+padding: 16px 18px; margin-bottom: 26px;
+font-size: 0.78em; line-height: 2.1; color: #111; font-weight: 700; font-family: ‘Noto Sans JP’, sans-serif;
 }
 .t-rule-box .hi  { color: #b06000; font-weight: 900; }
 .t-rule-box .red { color: #cc0033; font-weight: 900; }
 .t-rule-box .grn { color: #007744; font-weight: 900; }
 .sec-label {
-  width: 100%; text-align: left;
-  font-family: 'DotGothic16', monospace; font-size: 0.6em;
-  color: var(--muted); letter-spacing: 0.25em; margin-bottom: 12px; text-transform: uppercase;
+width: 100%; text-align: left;
+font-family: ‘DotGothic16’, monospace; font-size: 0.6em;
+color: var(–muted); letter-spacing: 0.25em; margin-bottom: 12px; text-transform: uppercase;
 }
 .lv-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; width: 100%; margin-bottom: 20px; }
 .lv-btn {
-  aspect-ratio: 1; background: var(--panel); border: 1px solid var(--border);
-  border-radius: 2px; color: var(--muted); cursor: pointer;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 2px; transition: all 0.18s; font-family: 'Noto Sans JP', sans-serif;
+aspect-ratio: 1; background: var(–panel); border: 1px solid var(–border);
+border-radius: 2px; color: var(–muted); cursor: pointer;
+display: flex; flex-direction: column; align-items: center; justify-content: center;
+gap: 2px; transition: all 0.18s; font-family: ‘Noto Sans JP’, sans-serif;
 }
-.lv-btn .n { font-size: 1.3em; font-weight: 700; color: var(--text); line-height: 1; }
-.lv-btn .s { font-family: 'Space Mono', monospace; font-size: 0.52em; color: var(--sage); }
-.lv-btn:hover:not(.locked) { border-color: var(--amber); background: rgba(200,144,60,0.06); }
-.lv-btn.sel   { border-color: var(--amber); background: rgba(200,144,60,0.08); }
-.lv-btn.sel .n { color: var(--gold); }
-.lv-btn.done  { border-color: var(--dim); }
+.lv-btn .n { font-size: 1.3em; font-weight: 700; color: var(–text); line-height: 1; }
+.lv-btn .s { font-family: ‘Space Mono’, monospace; font-size: 0.52em; color: var(–sage); }
+.lv-btn:hover:not(.locked) { border-color: var(–amber); background: rgba(200,144,60,0.06); }
+.lv-btn.sel   { border-color: var(–amber); background: rgba(200,144,60,0.08); }
+.lv-btn.sel .n { color: var(–gold); }
+.lv-btn.done  { border-color: var(–dim); }
 .lv-btn.locked { opacity: 0.2; cursor: not-allowed; }
 .btn-start {
-  width: 100%; padding: 15px; background: transparent;
-  border: 1px solid var(--amber); border-radius: 2px;
-  color: var(--amber); font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 900; font-size: 1.1em;
-  letter-spacing: 0.3em; cursor: pointer; transition: all 0.22s;
+width: 100%; padding: 15px; background: transparent;
+border: 1px solid var(–amber); border-radius: 2px;
+color: var(–amber); font-family: ‘Noto Sans JP’, sans-serif;
+font-weight: 900; font-size: 1.1em;
+letter-spacing: 0.3em; cursor: pointer; transition: all 0.22s;
 }
-.btn-start:hover  { background: var(--amber); color: var(--night); }
+.btn-start:hover  { background: var(–amber); color: var(–night); }
 .btn-start:active { transform: scale(0.98); }
 
 /* ━━━━━ GAME ━━━━━ */
 #scr-game { justify-content: center; position: relative; padding-top: 20px; }
 
 .g-meta {
-  display: flex; justify-content: space-between; align-items: baseline;
-  width: 100%; margin-bottom: 14px;
+display: flex; justify-content: space-between; align-items: baseline;
+width: 100%; margin-bottom: 14px;
 }
-.g-lv  { font-family: 'DotGothic16', monospace; font-size: 0.9em; color: var(--amber); letter-spacing: 0.06em; }
-.g-q   { font-family: 'DotGothic16', monospace; font-size: 0.65em; color: var(--text); }
+.g-lv  { font-family: ‘DotGothic16’, monospace; font-size: 0.9em; color: var(–amber); letter-spacing: 0.06em; }
+.g-q   { font-family: ‘DotGothic16’, monospace; font-size: 0.65em; color: var(–text); }
 .btn-sound {
-  background: transparent; border: 1px solid var(--border);
-  border-radius: 4px; padding: 2px 7px; font-size: 0.85em;
-  cursor: pointer; color: var(--muted); transition: all 0.15s;
-  line-height: 1.4;
+background: transparent; border: 1px solid var(–border);
+border-radius: 4px; padding: 2px 7px; font-size: 0.85em;
+cursor: pointer; color: var(–muted); transition: all 0.15s;
+line-height: 1.4;
 }
-.btn-sound:hover { border-color: var(--gold); }
+.btn-sound:hover { border-color: var(–gold); }
 .btn-sound.muted { opacity: 0.35; }
-.g-sc  { font-family: 'DotGothic16', monospace; font-size: 0.72em; color: var(--gold); }
+.g-sc  { font-family: ‘DotGothic16’, monospace; font-size: 0.72em; color: var(–gold); }
 
 .g-dots { display: flex; gap: 5px; width: 100%; margin-bottom: 12px; }
-.dot { flex: 1; height: 2px; background: var(--dim); transition: background 0.3s; }
-.dot.cur { background: var(--amber); }
-.dot.ok  { background: var(--sage); }
-.dot.ng  { background: var(--rust); }
+.dot { flex: 1; height: 2px; background: var(–dim); transition: background 0.3s; }
+.dot.cur { background: var(–amber); }
+.dot.ok  { background: var(–sage); }
+.dot.ng  { background: var(–rust); }
 
 .timer-track {
-  width: 100%; height: 2px; background: var(--dim);
-  margin-bottom: 0; position: relative; overflow: visible;
-  margin-top: 4px;
+width: 100%; height: 2px; background: var(–dim);
+margin-bottom: 0; position: relative; overflow: visible;
+margin-top: 4px;
 }
-.timer-fill { height: 2px; width: 100%; background: var(--amber); transform-origin: left; }
+.timer-fill { height: 2px; width: 100%; background: var(–amber); transform-origin: left; }
 .timer-glow {
-  position: absolute; right: 0; top: -3px;
-  width: 8px; height: 8px; border-radius: 50%;
-  background: var(--amber); box-shadow: 0 0 10px var(--amber);
-  transform: translateX(4px); pointer-events: none;
+position: absolute; right: 0; top: -3px;
+width: 8px; height: 8px; border-radius: 50%;
+background: var(–amber); box-shadow: 0 0 10px var(–amber);
+transform: translateX(4px); pointer-events: none;
 }
 
 /* words — fixed height, fully centered */
 .words-area {
-  width: 100%;
-  height: 230px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
+width: 100%;
+height: 230px;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+z-index: 1;
 }
 .word-wrap {
-  text-align: center;
-  transition: opacity 0.07s, filter 0.07s;
+text-align: center;
+transition: opacity 0.07s, filter 0.07s;
 }
 .words-area.hide .word-wrap { opacity: 0; filter: blur(10px); }
 .w1 {
-  font-family: 'Noto Sans JP', sans-serif; font-weight: 900;
-  font-size: clamp(3.4em, 13vw, 4.8em);
-  line-height: 1.1; color: #ffffff; letter-spacing: 0.02em;
-  text-shadow: 0 0 20px rgba(255,204,0,0.4);
+font-family: ‘Noto Sans JP’, sans-serif; font-weight: 900;
+font-size: clamp(3.4em, 13vw, 4.8em);
+line-height: 1.1; color: #ffffff; letter-spacing: 0.02em;
+text-shadow: 0 0 20px rgba(255,204,0,0.4);
 }
 .w2 {
-  font-family: 'Noto Sans JP', sans-serif; font-weight: 900;
-  font-size: clamp(3.4em, 13vw, 4.8em);
-  line-height: 1.2; color: var(--gold); letter-spacing: 0.02em;
-  text-shadow: 0 0 24px rgba(255,204,0,0.6);
+font-family: ‘Noto Sans JP’, sans-serif; font-weight: 900;
+font-size: clamp(3.4em, 13vw, 4.8em);
+line-height: 1.2; color: var(–gold); letter-spacing: 0.02em;
+text-shadow: 0 0 24px rgba(255,204,0,0.6);
 }
 
 /* buttons — directly below words */
 .game-bottom {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  position: relative;
-  z-index: 2;
+width: 100%;
+display: flex;
+flex-direction: column;
+gap: 10px;
+position: relative;
+z-index: 2;
 }
 /* fixed-height slot so layout never jumps */
 .btn-slot {
-  width: 100%;
-  height: 80px;
-  position: relative;
+width: 100%;
+height: 80px;
+position: relative;
 }
 .btn-sei, .ans-row {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.1s;
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+transition: opacity 0.1s;
 }
 .btn-sei {
-  background: transparent;
-  border: 2px solid var(--gold); border-radius: 4px;
-  color: var(--gold);
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 900; font-size: 2em; letter-spacing: 0.4em;
-  text-shadow: 0 0 12px rgba(255,204,0,0.4);
-  cursor: pointer; transition: all 0.2s;
-  display: flex; align-items: center; justify-content: center;
+background: transparent;
+border: 2px solid var(–gold); border-radius: 4px;
+color: var(–gold);
+font-family: ‘Noto Sans JP’, sans-serif;
+font-weight: 900; font-size: 2em; letter-spacing: 0.4em;
+text-shadow: 0 0 12px rgba(255,204,0,0.4);
+cursor: pointer; transition: all 0.2s;
+display: flex; align-items: center; justify-content: center;
 }
-.btn-sei:hover  { border-color: var(--amber); color: var(--amber); }
+.btn-sei:hover  { border-color: var(–amber); color: var(–amber); }
 .btn-sei:active { background: rgba(200,144,60,0.1); transform: scale(0.98); }
 .ans-row { display: flex; gap: 10px; }
 .btn-gn, .btn-kw {
-  flex: 1; height: 100%; background: transparent;
-  border-radius: 2px; cursor: pointer; transition: all 0.15s;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 900; font-size: 1.2em; letter-spacing: 0.02em;
+flex: 1; height: 100%; background: transparent;
+border-radius: 2px; cursor: pointer; transition: all 0.15s;
+font-family: ‘Noto Sans JP’, sans-serif;
+font-weight: 900; font-size: 1.2em; letter-spacing: 0.02em;
 }
-.btn-gn { border: 1px solid var(--rust); color: var(--rust); }
-.btn-kw { border: 1px solid var(--sage); color: var(--sage); }
+.btn-gn { border: 1px solid var(–rust); color: var(–rust); }
+.btn-kw { border: 1px solid var(–sage); color: var(–sage); }
 .btn-gn:hover  { background: rgba(176,85,53,0.12); }
 .btn-kw:hover  { background: rgba(122,170,130,0.1); }
-.btn-gn:active { background: var(--rust); color: #fff; transform: scale(0.97); }
-.btn-kw:active { background: var(--sage); color: var(--night); transform: scale(0.97); }
+.btn-gn:active { background: var(–rust); color: #fff; transform: scale(0.97); }
+.btn-kw:active { background: var(–sage); color: var(–night); transform: scale(0.97); }
 .kbd-hint {
-  font-family: 'DotGothic16', monospace; font-size: 0.55em;
-  color: var(--muted); letter-spacing: 0.02em; text-align: center;
+font-family: ‘DotGothic16’, monospace; font-size: 0.55em;
+color: var(–muted); letter-spacing: 0.02em; text-align: center;
 }
 
 /* ── character: absolute layer floating right, overlapping words ── */
 .chara-layer {
-  position: absolute;
-  right: 0;
-  top: 120px;       /* bite into words area */
-  width: 160px;
-  z-index: 0;
-  pointer-events: none;
+position: absolute;
+right: 0;
+top: 120px;       /* bite into words area */
+width: 160px;
+z-index: 0;
+pointer-events: none;
 }
 .chara-face {
-  width: 160px;
-  height: 190px;
-  position: relative;
+width: 160px;
+height: 190px;
+position: relative;
 }
 .chara-face img {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: contain;
-  opacity: 0;
-  transition: opacity 0.15s;
+position: absolute; inset: 0;
+width: 100%; height: 100%;
+object-fit: contain;
+opacity: 0;
+transition: opacity 0.15s;
 }
 .chara-face img.active { opacity: 1; }
 .chara-bubble {
-  position: absolute;
-  top: -55px;
-  right: 10px;
-  width: 120px;
-  opacity: 0;
-  transition: opacity 0.15s;
+position: absolute;
+top: -55px;
+right: 10px;
+width: 120px;
+opacity: 0;
+transition: opacity 0.15s;
 }
 .chara-bubble.active { opacity: 1; }
 .chara-bubble img { width: 100%; }
 
 /* feedback flash */
 .fb-flash {
-  position: fixed; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Noto Sans JP', sans-serif; font-weight: 900;
-  font-size: 9em; pointer-events: none; opacity: 0; z-index: 500;
+position: fixed; inset: 0;
+display: flex; align-items: center; justify-content: center;
+font-family: ‘Noto Sans JP’, sans-serif; font-weight: 900;
+font-size: 9em; pointer-events: none; opacity: 0; z-index: 500;
 }
-.fb-flash.ok { opacity: 1; color: var(--sage); text-shadow: 0 0 80px rgba(122,170,130,0.4); }
-.fb-flash.ng { opacity: 1; color: var(--rust); text-shadow: 0 0 80px rgba(176,85,53,0.4); }
+.fb-flash.ok { opacity: 1; color: var(–sage); text-shadow: 0 0 80px rgba(122,170,130,0.4); }
+.fb-flash.ng { opacity: 1; color: var(–rust); text-shadow: 0 0 80px rgba(176,85,53,0.4); }
 
 /* ━━━━━ RESULT ━━━━━ */
 #scr-result { align-items: center; justify-content: center; }
-.r-eyebrow { font-family: 'DotGothic16', monospace; font-size: 0.65em; color: var(--muted); letter-spacing: 0.2em; margin-bottom: 10px; text-transform: uppercase; }
+.r-eyebrow { font-family: ‘DotGothic16’, monospace; font-size: 0.65em; color: var(–muted); letter-spacing: 0.2em; margin-bottom: 10px; text-transform: uppercase; }
 .r-chara { width: 160px; height: 160px; margin: 0 auto 10px; position: relative; }
 .r-chara img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.2s; }
 .r-chara img.active { opacity: 1; }
-.r-score-big { font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 7em; color: var(--gold); line-height: 0.9; text-shadow: 0 0 30px rgba(255,204,0,0.5); }
+.r-score-big { font-family: ‘Noto Sans JP’, sans-serif; font-weight: 900; font-size: 7em; color: var(–gold); line-height: 0.9; text-shadow: 0 0 30px rgba(255,204,0,0.5); }
 .r-denom { font-size: 0.75em; color: #9c8870; font-weight: 400; margin-bottom: 6px; text-shadow: 0 1px 3px rgba(0,0,0,0.4); }
-.r-rank  { font-size: 0.95em; color: var(--text); font-weight: 700; margin-bottom: 18px; letter-spacing: 0.05em; font-family: 'Noto Sans JP', sans-serif; }
+.r-rank  { font-size: 0.95em; color: var(–text); font-weight: 700; margin-bottom: 18px; letter-spacing: 0.05em; font-family: ‘Noto Sans JP’, sans-serif; }
 .r-dots { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; width: 100%; margin-bottom: 22px; }
-.rdot { width: 100%; aspect-ratio: 1; border-radius: 50%; border: 1px solid; display: flex; align-items: center; justify-content: center; font-size: 0.9em; font-family: 'Cormorant Garamond', serif; }
-.rdot.ok { border-color: var(--sage); color: var(--sage); }
-.rdot.ng { border-color: var(--rust); color: var(--rust); }
+.rdot { width: 100%; aspect-ratio: 1; border-radius: 50%; border: 1px solid; display: flex; align-items: center; justify-content: center; font-size: 0.9em; font-family: ‘Cormorant Garamond’, serif; }
+.rdot.ok { border-color: var(–sage); color: var(–sage); }
+.rdot.ng { border-color: var(–rust); color: var(–rust); }
 .r-btns { display: flex; flex-direction: column; gap: 8px; width: 100%; }
-.btn-next { width: 100%; padding: 14px; background: var(--amber); color: #000; border: none; border-radius: 4px; font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 1.05em; letter-spacing: 0.1em; cursor: pointer; transition: all 0.18s; }
-.btn-next:hover { background: var(--gold); }
-.btn-outline { width: 100%; padding: 11px; background: transparent; border-radius: 4px; font-family: 'Noto Sans JP', sans-serif; font-weight: 700; font-size: 0.82em; letter-spacing: 0.08em; cursor: pointer; transition: all 0.15s; border: 1px solid var(--border); color: var(--text); }
-.btn-outline:hover { border-color: var(--dim); color: var(--text); }
+.btn-next { width: 100%; padding: 14px; background: var(–amber); color: #000; border: none; border-radius: 4px; font-family: ‘Noto Sans JP’, sans-serif; font-weight: 900; font-size: 1.05em; letter-spacing: 0.1em; cursor: pointer; transition: all 0.18s; }
+.btn-next:hover { background: var(–gold); }
+.btn-outline { width: 100%; padding: 11px; background: transparent; border-radius: 4px; font-family: ‘Noto Sans JP’, sans-serif; font-weight: 700; font-size: 0.82em; letter-spacing: 0.08em; cursor: pointer; transition: all 0.15s; border: 1px solid var(–border); color: var(–text); }
+.btn-outline:hover { border-color: var(–dim); color: var(–text); }
 
 /* ━━━━━ ALL CLEAR ━━━━━ */
 #scr-over { align-items: center; justify-content: center; }
 .go-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; width: 100%; margin: 18px 0; }
-.go-cell { background: var(--panel); border: 1px solid var(--border); border-radius: 2px; padding: 9px 4px; text-align: center; }
-.go-cell .cl { font-family: 'Space Mono',monospace; font-size: 0.55em; color: #9c8870; margin-bottom: 3px; }
-.go-cell .cv { font-family: 'Cormorant Garamond',serif; font-size: 1.5em; color: var(--gold); }
-.go-total { font-family: 'Noto Sans JP', sans-serif; font-weight: 900; font-size: 5em; color: var(--gold); line-height: 1; text-shadow: 0 0 30px rgba(255,204,0,0.5); }
+.go-cell { background: var(–panel); border: 1px solid var(–border); border-radius: 2px; padding: 9px 4px; text-align: center; }
+.go-cell .cl { font-family: ‘Space Mono’,monospace; font-size: 0.55em; color: #9c8870; margin-bottom: 3px; }
+.go-cell .cv { font-family: ‘Cormorant Garamond’,serif; font-size: 1.5em; color: var(–gold); }
+.go-total { font-family: ‘Noto Sans JP’, sans-serif; font-weight: 900; font-size: 5em; color: var(–gold); line-height: 1; text-shadow: 0 0 30px rgba(255,204,0,0.5); }
 .go-sub { color: #9c8870; font-size: 0.75em; font-weight: 400; margin-bottom: 24px; letter-spacing: 0.1em; text-shadow: 0 1px 3px rgba(0,0,0,0.4); }
-.rule-gold { width: 40px; height: 1px; background: var(--amber); margin: 0 auto 22px; }
+.rule-gold { width: 40px; height: 1px; background: var(–amber); margin: 0 auto 22px; }
 
-/* ambient blobs */
-.blob { position: fixed; border-radius: 50%; filter: blur(100px); pointer-events: none; z-index: 0; }
-.blob1 { width: 400px; height: 400px; background: rgba(80,0,160,0.25); top: -120px; left: -120px; }
-.blob2 { width: 320px; height: 320px; background: rgba(0,100,200,0.18); bottom: -80px; right: -80px; }
 </style>
 </head>
 <body>
-<div class="blob blob1"></div>
-<div class="blob blob2"></div>
-
 <div id="app">
 
   <!-- TITLE -->
+
   <div id="scr-title" class="screen">
     <p class="t-eyebrow">A reaction game</p>
     <h1 class="t-main">Say Goodnight</h1>
@@ -323,6 +318,7 @@ body {
   </div>
 
   <!-- GAME -->
+
   <div id="scr-game" class="screen hidden">
     <div class="g-meta">
       <span class="g-lv" id="g-lv">Level 1</span>
@@ -336,39 +332,43 @@ body {
       <div class="timer-glow" id="g-glow"></div>
     </div>
 
-    <div class="words-area" id="g-words">
-      <div class="word-wrap">
-        <div class="w1" id="w1"></div>
-        <div class="w2" id="w2"></div>
-      </div>
-    </div>
+```
+<div class="words-area" id="g-words">
+  <div class="word-wrap">
+    <div class="w1" id="w1"></div>
+    <div class="w2" id="w2"></div>
+  </div>
+</div>
 
-    <!-- character: absolute layer, overlaps words area -->
-    <div class="chara-layer">
-      <div class="chara-bubble" id="chara-bubble">
-        <img id="chara-bubble-img" src="" alt="">
-      </div>
-      <div class="chara-face">
-        <img id="ci-neutral" src="" alt="">
-        <img id="ci-think"   src="" alt="">
-        <img id="ci-gn"      src="" alt="">
-        <img id="ci-kw"      src="" alt="">
-      </div>
-    </div>
+<!-- character: absolute layer, overlaps words area -->
+<div class="chara-layer">
+  <div class="chara-bubble" id="chara-bubble">
+    <img id="chara-bubble-img" src="" alt="">
+  </div>
+  <div class="chara-face">
+    <img id="ci-neutral" src="" alt="">
+    <img id="ci-think"   src="" alt="">
+    <img id="ci-gn"      src="" alt="">
+    <img id="ci-kw"      src="" alt="">
+  </div>
+</div>
 
-    <div class="game-bottom">
-      <div class="btn-slot">
-        <button class="btn-sei" id="btn-sei" onclick="onSei()">SAY</button>
-        <div class="ans-row hidden" id="ans-row">
-          <button class="btn-gn" onclick="onAns('gn')">グッナイ</button>
-          <button class="btn-kw" onclick="onAns('kw')">コンニチワ</button>
-        </div>
-      </div>
-      <p class="kbd-hint">space = SAY &nbsp; Z/← = グッナイ &nbsp; X/→ = コンニチワ</p>
+<div class="game-bottom">
+  <div class="btn-slot">
+    <button class="btn-sei" id="btn-sei" onclick="onSei()">SAY</button>
+    <div class="ans-row hidden" id="ans-row">
+      <button class="btn-gn" onclick="onAns('gn')">グッナイ</button>
+      <button class="btn-kw" onclick="onAns('kw')">コンニチワ</button>
     </div>
+  </div>
+  <p class="kbd-hint">space = SAY &nbsp; Z/← = グッナイ &nbsp; X/→ = コンニチワ</p>
+</div>
+```
+
   </div>
 
   <!-- RESULT -->
+
   <div id="scr-result" class="screen hidden">
     <p class="r-eyebrow" id="r-lbl">Level 1</p>
     <div class="r-chara">
@@ -387,6 +387,7 @@ body {
   </div>
 
   <!-- ALL CLEAR -->
+
   <div id="scr-over" class="screen hidden">
     <p class="t-eyebrow" style="margin-bottom:10px">All Levels Clear</p>
     <h1 class="t-main" style="font-size:2.4em;margin-bottom:4px">Good night.</h1>
@@ -728,5 +729,6 @@ function speakWords(w1, w2) {
 
 renderTitle();
 </script>
+
 </body>
 </html>
